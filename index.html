@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ginna - Swift Developer, Python Developer, Cyber Security Student">
+<title>Ginna | Neon Red Cyber Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#ff003c;
+    --dark:#000000;
+    --card:rgba(255,255,255,0.05);
+}
+
+body{
+    background:#000;
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+
+/* Binary Background */
+#matrix{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-shadow:0 0 15px var(--primary);
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.runner{
+    width:140px;
+    height:140px;
+    border:4px solid var(--primary);
+    border-radius:50%;
+    box-shadow:0 0 25px var(--primary);
+    margin-bottom:25px;
+    animation:run 2s infinite ease-in-out;
+}
+
+.profile-photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--primary);
+    box-shadow:0 0 25px var(--primary);
+    margin-bottom:25px;
+}
+
+@keyframes run{
+0%{transform:translateX(-30px);}
+50%{transform:translateX(30px);}
+100%{transform:translateX(-30px);}
+}
+
+.hero h1{
+    font-size:5rem;
+    color:var(--primary);
+    text-shadow:0 0 25px var(--primary);
+}
+
+.typing{
+    color:var(--primary);
+    font-size:1.5rem;
+    height:40px;
+    margin-top:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    border:1px solid var(--primary);
+    color:var(--primary);
+    text-decoration:none;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:var(--primary);
+    color:black;
+    box-shadow:0 0 20px var(--primary);
+}
+
+/* Sections */
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:25px;
+    font-size:2.3rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,0,60,.3);
+    padding:25px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(255,0,60,.5);
+}
+
+/* Skills */
+.skill{
+    margin-bottom:20px;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#222;
+    border-radius:10px;
+}
+
+.fill{
+    height:100%;
+    background:var(--primary);
+    border-radius:10px;
+    box-shadow:0 0 10px var(--primary);
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,0,60,.3);
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:3rem;
+}
+nav{
+flex-wrap:wrap;
+}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+
+<img src="image/ginna.jpeg" alt="My Photo" class="profile-photo">
+
+<h1>GINNA</h1>
+
+<div class="typing" id="typing"></div>
+
+<p>Swift Developer | Python Developer | Cyber Security Student</p>
+
+<div>
+<a href="#projects" class="btn">View Projects</a>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Hello! I'm <strong>Ginna</strong>, a passionate technology enthusiast from
+<strong>Hosur, Tamil Nadu</strong>. I am currently pursuing
+<strong>B.Sc Cyber Security</strong> at
+<strong>RD National College of Arts and Science, Erode</strong>.
+</p>
+
+<br>
+
+<p>
+I have a strong interest in software development, cyber security,
+programming, and emerging technologies. As a beginner Swift Developer,
+I enjoy creating applications and exploring modern technologies.
+</p>
+
+<br>
+
+<p>
+Alongside Swift, I actively work with Python, C++, and HTML while
+continuously improving my development and problem-solving skills.
+</p>
+
+<br>
+
+<p>
+My primary focus is Cyber Security. I enjoy learning about secure
+software development, network security, vulnerability assessment,
+and digital protection systems.
+</p>
+
+<br>
+
+<p>
+I am a quick learner who enjoys adapting to new technologies and
+building innovative projects that challenge my creativity and skills.
+</p>
+
+<br>
+
+<p>
+Beyond technology, I am a District Level Basketball Player. Sports
+have taught me leadership, teamwork, discipline, dedication,
+and time management.
+</p>
+
+<br>
+
+<p>
+I was honored with the Promising Developer Award at Skynet, which
+motivated me to continue improving my technical abilities and
+pursuing excellence in software development and cyber security.
+</p>
+
+<br>
+
+<p>
+My long-term goal is to become a highly skilled Cyber Security
+Professional and Software Developer capable of building secure,
+innovative, and impactful solutions.
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>School</h3>
+<p>St. Joseph's Matric Higher Secondary School, Hosur</p>
+<p>12th Standard Marks: 391</p>
+</div>
+
+<div class="card">
+<h3>College</h3>
+<p>RD National College of Arts and Science, Erode</p>
+<p>B.Sc Cyber Security</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+Swift
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+Python
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+C++
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+HTML
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+<div class="skill">
+Cyber Security
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="skill">
+Problem Solving
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>⌨️ Custom Keyboard Project</h3>
+</div>
+
+<div class="card">
+<h3>📱 Swift Application Development</h3>
+</div>
+
+<div class="card">
+<h3>🛡️ Cyber Security Learning Projects</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements">
+
+<h2 class="section-title">Achievements & Experience</h2>
+
+<div class="grid">
+
+<div class="card">
+🏀 District Level Basketball Player
+</div>
+
+<div class="card">
+🏆 Promising Developer Award at Skynet
+</div>
+
+<div class="card">
+💼 Skynet Employer
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+<p>📞 +91 63824 52849</p>
+<br>
+<p>📧 mohamedaliginnaa35@gmail.com</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Ginna Portfolio
+</footer>
+
+<script>
+// Typing Animation
+const texts=[
+"Swift Developer",
+"Python Developer",
+"Cyber Security Student",
+"Quick Learner"
+];
+
+let i=0;
+let j=0;
+let deleting=false;
+
+function type(){
+let current=texts[i];
+document.getElementById("typing").textContent=current.substring(0,j);
+
+if(!deleting){
+j++;
+if(j>current.length){
+deleting=true;
+setTimeout(type,1000);
+return;
+}
+}else{
+j--;
+if(j===0){
+deleting=false;
+i=(i+1)%texts.length;
+}
+}
+setTimeout(type,deleting?50:100);
+}
+type();
+
+// Binary Rain
+const canvas=document.getElementById("matrix");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+const chars="01";
+const size=16;
+const columns=Math.floor(canvas.width/size);
+const drops=[];
+
+for(let x=0;x<columns;x++){
+drops[x]=1;
+}
+
+function draw(){
+ctx.fillStyle="rgba(0,0,0,0.08)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="#ff003c";
+ctx.font=size+"px monospace";
+
+for(let i=0;i<drops.length;i++){
+
+const text=chars[Math.floor(Math.random()*2)];
+
+ctx.fillText(text,i*size,drops[i]*size);
+
+if(drops[i]*size>canvas.height && Math.random()>0.975){
+drops[i]=0;
+}
+
+drops[i]++;
+}
+}
+
+setInterval(draw,35);
+
+window.addEventListener("resize",()=>{
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+});
+</script>
+
+</body>
+</html>
